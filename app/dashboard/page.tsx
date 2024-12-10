@@ -16,7 +16,7 @@ export default function Dashboard() {
       const pairs = await getAllPair();
       console.log("PAIRS", pairs);
 
-      const sol_usdc = pairs.response.find(e => e.name === 'SOL-USDC' || e.name === 'USDC-SOL')
+      const sol_usdc = pairs.response.filter(e => e.name === 'SOL-USDC' || e.name === 'USDC-SOL')
       console.log("SOL-USDC : ", sol_usdc)
     }
 
